@@ -1,0 +1,293 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+
+* {
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+/* Global styling */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--blanco1);
+    min-height: 800rem;
+}
+
+:root {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    --blanco1: #F4F3EE;
+    --blanco2: #F2F2F2;
+    --azul1:   #5A92A5;
+    --verde-turquesa: #4CB0A1;
+    --negro1:  #252422;
+}
+
+.banners{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 2.111rem + 2.778vw, 6rem);
+    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) 1rem;
+    background-color: var(--verde-turquesa);
+    margin: clamp(1rem, 0.704rem + 0.926vw, 2rem) 0;
+    color: var(--blanco1);
+}
+
+.main{
+    opacity: 0;
+    transition: opacity .5s ease;
+    transition-delay: .5s;
+}
+
+/* Hero */
+
+.hero-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-left: -100%;
+    transition: margin-left .5s ease;
+}
+
+.hero-video {
+    width: 100%;
+    max-height: 70rem;
+    min-height: 25rem;
+    object-fit: cover;
+    display: block;
+    filter: brightness(40%);
+}
+
+.rss-container {
+    width: min(70%, 40rem);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fa-instagram,
+.fa-tiktok,
+.fa-facebook,
+.fa-x-twitter {
+    color: var(--blanco1);
+    text-align: center;
+    font-size: clamp(3rem, 2.704rem + 0.926vw, 4rem);
+}
+
+.texts-container{
+    width: min(90%, 100rem);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texts-title{
+    font-size: clamp(3rem, 2.704rem + 0.926vw, 4rem);
+    color: var(--blanco1);
+    padding: 1rem;
+}
+
+.hero-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 8%;
+    min-width: 5rem;
+    margin: 2% 0 0 2%;
+}
+
+.hero-img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Section 1 Section 2 */
+
+.section__one{
+    width: 100%;
+    background-color: var(--azul1);
+}
+
+.section__one__flex{
+    width: 100%;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-bottom: clamp(1rem, 0.704rem + 0.926vw, 2rem);
+}
+
+.section__one__item__1{
+    width: 100%;
+    max-width: 20rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item__1__img{
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+    object-position: center;
+}
+
+.item__1__paragraph{
+    font-size: clamp(1.1rem, 0.952rem + 0.463vw, 1.6rem);
+    text-align: center;
+    font-style: italic;
+    color: var(--blanco2);
+    font-weight: 500;
+    padding-top: 1rem;
+}
+
+.section__one__item__2{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item__2__subtitle{
+    font-size: clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--blanco2);
+}
+
+.item__2__paragraph{
+    font-size: clamp(1.4rem, 1.341rem + 0.185vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--blanco2);
+    padding: 1rem 0;
+}
+
+/* Carrusel de imagenes */
+
+.carousel-container {
+    width: 100%;
+    height: 40rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.carousel {
+    display: flex;
+    width: 400%; /* 4 imágenes: cada una ocupa el 100% del contenedor */
+    animation: slide 20s infinite ease;
+}
+  
+.carousel img {
+    width: 100vw;
+    height: 40rem;
+    object-fit: cover;
+    display: block;
+}
+  
+  /* Animación: cada imagen se muestra fija y la transición se realiza mediante margin-left */
+@keyframes slide {
+    /* Imagen 1 visible durante 0s a 4s */
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+    
+    /* Transición a Imagen 2: 4s a 6s */
+    25% { margin-left: -100vw; }
+    45% { margin-left: -100vw; }
+    
+    /* Transición a Imagen 3: 9s a 11s */
+    50% { margin-left: -200vw; }
+    70% { margin-left: -200vw; }
+    
+    /* Transición a Imagen 4: 14s a 16s */
+    75% { margin-left: -300vw; }
+    95% { margin-left: -300vw; }
+    
+    /* Pausa prolongada en la última imagen y transición de vuelta a la primera */
+    100% { margin-left: 0vw; }
+}
+
+/* Media Querys */
+
+@media (max-width: 767px) and (min-width: 250px){
+
+/* Section 1  Section 2*/
+
+.section__one__item__1{
+    max-width: 100%;
+}
+
+.item__1__img{
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+}
+
+.section__one__item__2{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.item__2__paragraph{
+    text-align: center;
+}
+
+/* Carrusel de imagenes. */
+
+.carousel-container {
+    width: 100%;
+    height: 25rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100vw;
+    height: 25rem;
+    object-fit: cover;
+    display: block;
+}
+}
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
