@@ -8,23 +8,45 @@
     <script src="https://kit.fontawesome.com/ad431f2457.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
     <script src="JS/app.js" defer type="module"></script>
+    
+    <!-- Optimizaciones de precarga -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://formsubmit.co">
+    <link rel="preload" href="fonts/Montserrat.woff2" as="font" type="font/woff2" crossorigin>
+    
     <title>Landing Page</title>
 </head>
 
 <body>
 <!-- Hero -->
-<header class="hero-container">
-    <video class="hero-video" src="assets/heroVideo.webm" autoplay muted loop></video>
-    <nav class="rss-container" aria-label="Redes sociales">
-        <a href="#" class="rss-link"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="rss-link"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="rss-link"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#" class="rss-link"><i class="fa-brands fa-x-twitter"></i></a>
-    </nav>
-    <div class="texts-container">
-        <img src="assets/logo.webp" alt="Logo Flavorino Web" class="hero-imagen">
-    </div>
-</header>
+    <header class="hero-container">
+        <video class="hero-video" 
+        poster="assets/video-poster.jpg"
+        preload="auto" 
+        muted 
+        loop 
+        playsinline
+        autoplay>
+        <source src="assets/heroVideo.webm" type="video/webm">
+        Tu navegador no soporta videos HTML5
+        </video>
+        
+        <nav class="rss-container" aria-label="Redes sociales">
+            <a href="#" class="rss-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="rss-link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="rss-link"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="rss-link"><i class="fa-brands fa-x-twitter"></i></a>
+        </nav>
+        
+        <div class="texts-container">
+            <img src="assets/logo.webp" 
+                alt="Logo Flavorino Web" 
+                class="hero-imagen"
+                width="800" 
+                height="450"
+                loading="eager">
+        </div>
+    </header>
 
 <!-- Main -->
 <main class="main">
@@ -40,7 +62,7 @@
                     <i class="fa-solid fa-check section-1-icon"></i>
                     <small class="section-1-txt">Diseño asombroso</small>
                 </div>
-                    <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
             </div>
 
             <div class="section-1-div">
@@ -48,7 +70,7 @@
                     <i class="fa-solid fa-check section-1-icon"></i>
                     <small class="section-1-txt">Redacción</small>
                 </div>
-                    <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
             </div>
 
             <div class="section-1-div">
@@ -56,7 +78,7 @@
                     <i class="fa-solid fa-check section-1-icon"></i>
                     <small class="section-1-txt">Desarrollo</small>
                 </div>
-                    <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
             </div>
 
             <div class="section-1-div">
@@ -64,10 +86,11 @@
                     <i class="fa-solid fa-check section-1-icon"></i>
                     <small class="section-1-txt">Soporte 24/7</small>
                 </div>
-                    <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <p class="section-1-paragraph-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
             </div>
         </div>
     </section>        
+
 <!-- Seccion 2 -->
     <section class="section-2" aria-labelledby="section2-heading">
         <div class="section-2-slider-container">
@@ -92,13 +115,19 @@
             </div>
         </div>
     </section>
+
 <!-- Seccion 3 -->
     <section class="section-3" aria-labelledby="section3-heading">
         <div class="section-3-slider-container">
             <div class="section-3-container-1">
                 <div class="section-3-parent">
                     <div class="section-3-item-image">
-                        <img src="assets/foto2.webp" alt="Diseño web moderno" class="section-3-imagen">
+                        <img src="assets/foto2.webp" 
+                             alt="Diseño web moderno" 
+                             class="section-3-imagen"
+                             width="600" 
+                             height="400"
+                             loading="lazy">
                     </div>
                     
                     <div class="section-3-item-txt">
@@ -124,7 +153,12 @@
             <div class="section-3-container-2">
                 <div class="section-3-parent">
                     <div class="section-3-item-image section-3-item-image--opacity">
-                        <img src="assets/foto14.webp" alt="Desarrollo web responsive" class="section-3-imagen">
+                        <img src="assets/foto14.webp" 
+                             alt="Desarrollo web responsive" 
+                             class="section-3-imagen"
+                             width="600" 
+                             height="400"
+                             loading="lazy">
                     </div>
                     
                     <div class="section-3-item-txt">
@@ -148,6 +182,7 @@
             </div>
         </div>
     </section>
+
 <!-- Seccion 4 -->
     <section class="section-4" aria-labelledby="section4-heading">
         <div class="section-4-container">
@@ -159,34 +194,61 @@
             </div>
         </div>
     </section>
+
 <!-- Carrusel de imagenes -->
     <article class="carousel-container">
         <div class="carousel">
-        <!-- Imagen 1 -->
-        <picture>
-            <source media="(min-width: 768px)" srcset="assets/foto3-desktop.webp">
-            <img src="assets/foto3-mobile.webp" alt="Diseño web profesional" class="carousel-img">
-        </picture>
+            <picture>
+                <source media="(min-width: 768px)" 
+                        srcset="assets/foto3-desktop.webp 1920w,
+                                assets/foto3-desktop-medium.webp 960w"
+                        sizes="(max-width: 1400px) 100vw, 1400px">
+                <img src="assets/foto3-mobile.webp" 
+                     alt="Diseño web profesional" 
+                     class="carousel-img"
+                     loading="lazy"
+                     width="800" 
+                     height="450">
+            </picture>
 
-        <!-- Imagen 2 -->
-        <picture>
-            <source media="(min-width: 768px)" srcset="assets/foto4-desktop.webp">
-            <img src="assets/foto4-mobile.webp" alt="Desarrollo móvil">
-        </picture>
+            <picture>
+                <source media="(min-width: 768px)" 
+                        srcset="assets/foto4-desktop.webp 1920w,
+                                assets/foto4-desktop-medium.webp 960w"
+                        sizes="(max-width: 1400px) 100vw, 1400px">
+                <img src="assets/foto4-mobile.webp" 
+                     alt="Desarrollo móvil" 
+                     loading="lazy"
+                     width="800" 
+                     height="450">
+            </picture>
 
-        <!-- Imagen 3 -->
-        <picture>
-            <source media="(min-width: 768px)" srcset="assets/foto5-desktop.webp">
-            <img src="assets/foto5-mobile.webp" alt="Optimización SEO">
-        </picture>
+            <picture>
+                <source media="(min-width: 768px)" 
+                        srcset="assets/foto5-desktop.webp 1920w,
+                                assets/foto5-desktop-medium.webp 960w"
+                        sizes="(max-width: 1400px) 100vw, 1400px">
+                <img src="assets/foto5-mobile.webp" 
+                     alt="Optimización SEO" 
+                     loading="lazy"
+                     width="800" 
+                     height="450">
+            </picture>
 
-        <!-- Imagen 4 -->
-        <picture>
-            <source media="(min-width: 768px)" srcset="assets/foto6-desktop.webp">
-            <img src="assets/foto6-mobile.webp" alt="Soporte técnico">
-        </picture>
+            <picture>
+                <source media="(min-width: 768px)" 
+                        srcset="assets/foto6-desktop.webp 1920w,
+                                assets/foto6-desktop-medium.webp 960w"
+                        sizes="(max-width: 1400px) 100vw, 1400px">
+                <img src="assets/foto6-mobile.webp" 
+                     alt="Soporte técnico" 
+                     loading="lazy"
+                     width="800" 
+                     height="450">
+            </picture>
         </div>
     </article>
+
 <!-- Seccion 5 -->
     <section class="section-5" aria-labelledby="section5-heading">
         <div class="section-5-slider-container">
@@ -218,6 +280,7 @@
             </div>
         </div>
     </section>
+
 <!-- Seccion 6 -->
     <section class="section-6" aria-labelledby="section6-heading">
         <div class="section-6-container">
@@ -231,49 +294,86 @@
             <div class="section-6-items-container">
                 <!-- Item 1 -->
                 <div class="item-texts">
-                    <img src="assets/asteriscos.webp" alt="Icono de testimonio" class="item-1-image">
+                    <img src="assets/asteriscos.webp" 
+                         alt="Icono de testimonio" 
+                         class="item-1-image"
+                         width="54" 
+                         height="54"
+                         loading="lazy">
                     <p class="item-1-paragraph">
                         El artículo evidente llegó expreso más alto que los hombres hicieron muchacho. 
                         Ama enteramente sensata lo soy. Rápido puede señorío dinero inteligente espera 
                         valer la pena también. Comfort produce marido chico ella tenía audiencia.
                     </p>
                     <div class="item-1-pic">
-                        <video src="assets/perfilMujer1.webm" preload="auto" muted class="item-1-pic-imagen"></video>
+                        <video src="assets/perfilMujer1.webm" 
+                               preload="metadata" 
+                               muted 
+                               playsinline
+                               loading="lazy"
+                               class="item-1-pic-imagen"
+                               width="80" 
+                               height="80"></video>
                     </div>
                     <p class="item-1-paragraph-2">Mayo Smith</p>
                 </div>
 
                 <!-- Item 2 -->
                 <div class="item-texts">
-                    <img src="assets/asteriscos.webp" alt="Icono de testimonio" class="item-1-image">
+                    <img src="assets/asteriscos.webp" 
+                         alt="Icono de testimonio" 
+                         class="item-1-image"
+                         width="54" 
+                         height="54"
+                         loading="lazy">
                     <p class="item-1-paragraph">
                         El artículo evidente llegó expreso más alto que los hombres hicieron muchacho. 
                         Ama enteramente sensata lo soy. Rápido puede señorío dinero inteligente espera 
                         valer la pena también. Comfort produce marido chico ella tenía audiencia.
                     </p>
                     <div class="item-1-pic">
-                        <video src="assets/perfilHombre.webm" preload="auto" muted class="item-1-pic-imagen"></video>
+                        <video src="assets/perfilHombre.webm" 
+                               preload="metadata" 
+                               muted 
+                               playsinline
+                               loading="lazy"
+                               class="item-1-pic-imagen"
+                               width="80" 
+                               height="80"></video>
                     </div>
                     <p class="item-1-paragraph-2">Alberto Quiñones</p>
                 </div>
 
                 <!-- Item 3 -->
                 <div class="item-texts">
-                    <img src="assets/asteriscos.webp" alt="Icono de testimonio" class="item-1-image">
+                    <img src="assets/asteriscos.webp" 
+                         alt="Icono de testimonio" 
+                         class="item-1-image"
+                         width="54" 
+                         height="54"
+                         loading="lazy">
                     <p class="item-1-paragraph">
                         El artículo evidente llegó expreso más alto que los hombres hicieron muchacho. 
                         Ama enteramente sensata lo soy. Rápido puede señorío dinero inteligente espera 
                         valer la pena también. Comfort produce marido chico ella tenía audiencia.
                     </p>
                     <div class="item-1-pic">
-                        <video src="assets/perfilMujer2.webm" preload="auto" muted class="item-1-pic-imagen"></video>
+                        <video src="assets/perfilMujer2.webm" 
+                               preload="metadata" 
+                               muted 
+                               playsinline
+                               loading="lazy"
+                               class="item-1-pic-imagen"
+                               width="80" 
+                               height="80"></video>
                     </div>
                     <p class="item-1-paragraph-2">Aura Mendoza</p>
                 </div>
             </div>
         </div>
     </section>
-<!-- seccion 7 -->
+
+<!-- Seccion 7 -->
     <section class="section-7" aria-labelledby="section7-heading">
         <div class="section-7-slider-container">
             <div class="section-7-container-1">
@@ -300,6 +400,7 @@
         </div>
     </section>
 </main>
+
 <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="footer-texts-container">
@@ -320,12 +421,12 @@
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Jhon">
             </div>
-    
+
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Jhon@correo.com">
             </div>
-    
+
             <div class="form-group">
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="5" maxlength="5000" placeholder="MAX-5000"></textarea>
@@ -348,6 +449,7 @@
             </div>
         </form>
     </footer>
+
     <div class="copyrigths">
         <p>
             &copy; 2025 Flavorino Web. Todos los derechos reservados.
@@ -359,13 +461,25 @@
             <a href="#">Términos y Condiciones</a>
         </p>
     </div>
-<!-- Boton arriba -->
+
+    <!-- Boton arriba -->
     <a href="#" aria-label="Volver al inicio">
         <i class="fa-regular fa-circle-up fa-bounce"></i>
     </a>
-<!-- Boton whatsapp -->
-    <a href="https://wa.me/123456?text=¡Hola!%20Nesecito%20información." class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
-        <img src="assets/iconoWhatsapp.svg" alt="Botón de WhatsApp" class="whatsapp-btn-img fa-fade">
+
+    <!-- Boton whatsapp -->
+    <a href="https://wa.me/123456?text=¡Hola!%20Nesecito%20información." 
+    class="whatsapp-btn" 
+    target="_blank" 
+    aria-label="Contactar por WhatsApp"
+    rel="noopener noreferrer">
+        <img src="assets/iconoWhatsapp.svg" 
+            alt="Botón de WhatsApp" 
+            class="whatsapp-btn-img fa-fade"
+            loading="lazy"
+            width="64" 
+            height="64">
     </a>
+
 </body>
 </html>
