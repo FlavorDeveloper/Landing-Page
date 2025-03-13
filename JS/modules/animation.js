@@ -11,7 +11,6 @@ export function animation () {
     const section5Content = document.querySelector('.section-5-content');
     const section6Container = document.querySelector('.section-6-items-container');
     const section6Asterics = document.querySelectorAll('.item-1-image');
-    const section6Videos = document.querySelectorAll('.item-1-pic-imagen');
     const section7Grid = document.querySelector('.section-7-grid');
     const cardBtnSection2 = document.querySelector('.card__description__cta');
     const cardContainerSection2 = document.querySelector('.card-container');
@@ -104,10 +103,6 @@ export function animation () {
             if(entries[0].isIntersecting){
                 section6Container.style.transform = 'translateX(0)';
                 
-                section6Videos.forEach(video=>{
-                    video.play()
-                })
-
                 section6Asterics.forEach(asteric=>{
                     asteric.classList.add('fa-bounce')
                     
