@@ -558,7 +558,7 @@ body::before {
     height: 40rem; /* Desktop */
     object-fit: cover;
     display: block;
-    aspect-ratio: 4.8 / 1; 
+    aspect-ratio: 16/9;
 }
 
 /* Animación: cada imagen se muestra fija y la transición se realiza mediante margin-left */
