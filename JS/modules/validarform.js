@@ -135,7 +135,7 @@ export function validarForm () {
         const formData = new FormData(formulario);
     
         // Enviar mediante Fetch API
-        fetch(formulario.action, {
+        fetch('https://formsubmit.co/flavorinoweb@gmail.com', {
             method: 'POST',
             body: formData
         })
