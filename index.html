@@ -43,10 +43,8 @@
 <!-- Hero -->
     <header class="hero-container">
         <video class="hero-video" 
-        preload="auto" 
         muted 
         loop 
-        playsinline
         autoplay>
         <source src="assets/heroVideo.webm" type="video/webm">
         Tu navegador no soporta videos HTML5
@@ -59,14 +57,10 @@
             <a href="#" class="rss-link"><i class="fa-brands fa-x-twitter"></i></a>
         </nav>
         
-        <div class="texts-container">
-            <img src="assets/logo.webp" 
-                alt="Logo Flavorino Web" 
-                class="hero-imagen"
-                width="800" 
-                height="450"
-                loading="eager">
-        </div>
+            <picture class="texts-container">
+                <source media="(min-width: 768px)" srcset="assets/logoDesktop.png">
+                <img src="assets/logoMobile.png" alt="Logo Flavorino Web" class="hero-imagen">
+            </picture>
     </header>
 
 <!-- Main -->
