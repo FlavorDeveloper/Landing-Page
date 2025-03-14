@@ -147,20 +147,17 @@ export function validarForm () {
             // Éxito: mostrar mensaje y resetear
             spinner.style.visibility = 'hidden';
             
-            const sendMessage = document.createElement('P');
-            sendMessage.textContent = 'ENVIADO';
-            sendMessage.style.textAlign = 'center';
-            sendMessage.style.fontSize = '2rem';
-            sendMessage.style.fontFamily = '"Oswald", serif';
-            sendMessage.style.fontWeight = 'bold';
-            sendMessage.style.color = 'white';
-            sendMessage.style.letterSpacing = '.5rem';
-            sendMessage.style.fontStyle = 'italic';
-            formulario.appendChild(sendMessage);
+            const sendImage = document.createElement('IMG');
+            sendImage.src = '../assets/sendGif.gif';
+            sendImage.style.width = '10rem';
+            sendImage.style.display = 'block';
+            sendImage.style.margin = '0 auto';
+
+            formulario.appendChild(sendImage);
     
             setTimeout(() => {
-                formulario.removeChild(sendMessage);
-            }, 5000);
+                formulario.removeChild(sendImage);
+            }, 2000);
     
             // Resetear campos y objeto
             formulario.reset();
