@@ -127,7 +127,7 @@ export function validarForm () {
     }
 
     function enviarEmail(e) {
-        // e.preventDefault();
+        e.preventDefault();
         
         spinner.style.visibility = 'visible';
         
