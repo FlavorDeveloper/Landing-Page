@@ -56,7 +56,7 @@ export function validarForm () {
         }
 
         if (e.target.value.trim().length < 3){
-            mostrarAlerta(`El campo ${e.target.id} no es valido`,e.target.parentElement);
+            mostrarAlerta(`El campo ${e.target.id} debe tener un minimo de tres caracteres`,e.target.parentElement);
             email[e.target.name] = '';
             comprobarEmail();
             return;
@@ -130,34 +130,50 @@ export function validarForm () {
         e.preventDefault();
         
         spinner.style.visibility = 'visible';
-        
-        setTimeout(() => {
+    
+        // Configurar FormData
+        const formData = new FormData(formulario);
+    
+        // Enviar mediante Fetch API
+        fetch(formulario.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Error en la solicitud');
+            return response.text();
+        })
+        .then(data => {
+            // Éxito: mostrar mensaje y resetear
             spinner.style.visibility = 'hidden';
             
+            const sendMessage = document.createElement('P');
+            sendMessage.textContent = 'ENVIADO';
+            sendMessage.style.textAlign = 'center';
+            sendMessage.style.fontSize = '2rem';
+            sendMessage.style.fontFamily = '"Oswald", serif';
+            sendMessage.style.fontWeight = 'bold';
+            sendMessage.style.color = 'white';
+            sendMessage.style.letterSpacing = '.5rem';
+            sendMessage.style.fontStyle = 'italic';
+            formulario.appendChild(sendMessage);
+    
+            setTimeout(() => {
+                formulario.removeChild(sendMessage);
+            }, 5000);
+    
+            // Resetear campos y objeto
+            formulario.reset();
             email.nombre = '';
             email.email = '';
             email.mensaje = '';
-            
-            formulario.reset();
             comprobarEmail();
-            
-            // Creamos y mostramos el mensaje
-            const sendMessage = document.createElement('p');
-            sendMessage.textContent = 'MENSAJE ENVIADO 📧';
-            sendMessage.style.fontSize = '2rem';
-            sendMessage.style.fontWeight = 'bold';
-            sendMessage.style.color = 'white';
-            sendMessage.style.backgroundColor = 'green';
-            sendMessage.style.textAlign = 'center';
-            sendMessage.style.padding = '1rem';
-            sendMessage.style.borderRadius = '1rem';
-            formulario.appendChild(sendMessage);
-            
-            // Programamos la eliminación del mensaje después de 5 segundos
-            setTimeout(() => {
-                    formulario.removeChild(sendMessage);
-                }, 5000);
-            }, 3000);
+        })
+        .catch(error => {
+            // Manejar errores
+            spinner.style.visibility = 'hidden';
+            mostrarAlerta('Error al enviar el mensaje, Intente nuevamente', formulario);
+        });
     }
 })
 
