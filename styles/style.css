@@ -623,8 +623,8 @@ body::before {
 
 .fa-circle{
     position: absolute;
-    top: 8rem;
-    left: clamp(6rem, -17.089rem + 30.063vw, 25rem);
+    top: 12rem;
+    left: clamp(2rem, -25.949rem + 36.392vw, 25rem);
     font-size: 20rem;
     color: var(--azul1);
     z-index: -1;
@@ -633,10 +633,11 @@ body::before {
 .fa-circle-dot{
     position: absolute;
     bottom: 0;
-    right: clamp(21rem, -6.949rem + 36.392vw, 44rem);
+    right: clamp(36rem, 28.709rem + 9.494vw, 42rem);
     font-size: 20rem;
     z-index: -1;
     color: var(--azul1);
+    display: none;
 }
 
 .section-5-grid::after{
@@ -645,6 +646,7 @@ body::before {
     grid-row: 3/8;
     border-radius: 2rem;
     margin-left: clamp(-6rem, -13.291rem + 9.494vw, 0rem);
+    margin-bottom: clamp(0rem, 53.165rem + -37.975vw, 24rem);
     background-image: url(../assets/foto8.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -679,6 +681,7 @@ body::before {
     grid-column: 1/4;
     grid-row: 6/-1;
     border-radius: 2rem;
+    margin-bottom: clamp(0rem, 26.582rem + -18.987vw, 12rem);
     z-index: 100;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -834,6 +837,7 @@ body::before {
 }
 
 .item-texts{
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1420,17 +1424,19 @@ button:not([disabled]) {
 .section-5-grid::after{
     grid-column: 4/-1;
     grid-row: 5/-2;
-    margin-left: clamp(-3rem, -5.148rem + 6.711vw, 0rem);
+    margin-left: clamp(-6rem, -18.886rem + 40.268vw, 12rem);
     margin-top: clamp(-8rem, 2.295rem + -13.423vw, -2rem);
-    margin-bottom: clamp(-6rem, 0.864rem + -8.949vw, -2rem);
+    margin-bottom: clamp(3rem, -12.443rem + 20.134vw, -6rem);
     transform: scaleX(1);
 }
 
 .section-5-grid::before{
     grid-column: 1/5;
     grid-row: 7/-1;
-    margin-top: clamp(-4rem, 2.864rem + -8.949vw, 0rem);
-    margin-right: clamp(0rem, -2.864rem + 8.949vw, 4rem);
+    margin-top: clamp(-16rem, 16.602rem + -42.506vw, 3rem);
+    margin-right: -6rem;
+    margin-left: clamp(0rem, -5.727rem + 17.897vw, 8rem);
+    margin-bottom: 0;
 }
 
 .section-5-grid.modificado3::after{
