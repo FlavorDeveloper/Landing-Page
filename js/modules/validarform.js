@@ -148,7 +148,7 @@ export function validarForm () {
             spinner.style.visibility = 'hidden';
             
             const sendImage = document.createElement('IMG');
-            sendImage.src = '../.././assets/sendGif.gif';
+            sendImage.src = '.././assets/sendGif.gif';
             sendImage.style.width = '10rem';
             sendImage.style.display = 'block';
             sendImage.style.margin = '0 auto';
