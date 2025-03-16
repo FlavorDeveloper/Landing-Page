@@ -281,7 +281,7 @@ body::before {
     font-weight: 600;
     text-decoration: none;
     letter-spacing: clamp(0.1rem, 0.041rem + 0.185vw, 0.3rem);
-    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    padding: 2rem 3rem;
     margin-top: clamp(1rem, 0.704rem + 0.926vw, 2rem);
     border-radius: 3rem;
     outline: .2rem solid var(--blanco1);
@@ -441,7 +441,7 @@ body::before {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
-    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    padding: 2rem 3rem;
     border-radius: 3rem;
     background-color: var(--azul1);
     color: var(--blanco1);
@@ -528,7 +528,7 @@ body::before {
     width: max-content;
     font-size: 1.4rem;
     text-decoration: none;
-    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    padding: 2rem 3rem;
     border-radius: 3rem;
     font-weight: 600;
     color: var(--blanco1);
@@ -727,7 +727,7 @@ body::before {
     color: var(--blanco1);
     background-color: var(--azul1);
     border-radius: 3rem;
-    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    padding: 2rem 3rem;
     text-transform: uppercase;
 }
 
@@ -954,7 +954,7 @@ body::before {
     color: var(--blanco1);
     margin: 2rem 0;
     font-size: 1.4rem;
-    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    padding: 2rem 3rem;
     border-radius: 3rem;
 }
 
@@ -1131,7 +1131,7 @@ body::before {
 button{
     font-size: clamp(1.4rem, 1.222rem + 0.556vw, 2rem);
     margin: 2rem auto;
-    padding: clamp(1rem, 0.704rem + 0.926vw, 2rem) clamp(2rem, 1.704rem + 0.926vw, 3rem);
+    padding: 2rem 3rem;
     background: none;
     border: none;
     color: var(--blanco1);
@@ -1316,6 +1316,7 @@ button:not([disabled]) {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
+    padding: 1rem 2rem;
 }
 
 .other-screen-grid{
@@ -1396,6 +1397,7 @@ button:not([disabled]) {
 .item-link-cta{
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem 2rem;
 }
 
 /* Seccion 4 */
@@ -1403,6 +1405,7 @@ button:not([disabled]) {
 .section-4-cta{
     margin: 0 auto;
     margin-bottom: 1rem;
+    padding: 1rem 2rem;
 }
 
 /* Seccion 5 */
@@ -1470,6 +1473,10 @@ button:not([disabled]) {
     margin-top: clamp(3rem, 32.17rem + -38.031vw, 20rem);
 }
 
+.section-5-cta{
+    padding: 1rem 2rem;
+}
+
 /* Seccion 6 */
 
 .section-6-items-container{
@@ -1519,6 +1526,10 @@ button:not([disabled]) {
     margin-top: 3rem;
 }
 
+.section-7-cta{
+    padding: 1rem 2rem;
+}
+
 /* Footer */
 
 .footer-texts-container{
@@ -1541,6 +1552,10 @@ button:not([disabled]) {
 
 .footer-title{
     text-align: center;
+}
+
+button{
+    padding: 1rem 2rem;
 }
 
 }
