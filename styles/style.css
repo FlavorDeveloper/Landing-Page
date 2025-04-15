@@ -903,7 +903,6 @@ body::before {
 
 .marca {
     width: 25vw;
-    flex-shrink: 0;
 }
 
 .marca-img {
@@ -1528,7 +1527,7 @@ button:not([disabled]) {
 /* Carrusel de marcas. */
 
 .marcas-track {
-    animation: slide2 15s linear infinite;
+    animation: slide2 10s linear infinite;
 }
 
 .marca {
