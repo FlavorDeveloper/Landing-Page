@@ -565,23 +565,23 @@ body::before {
 
 @keyframes slide {
     /* Imagen 1 visible durante 0s a 4s */
-    0% { margin-left: 0; }
-    20% { margin-left: 0; }
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
     
     /* Transición a Imagen 2: 4s a 6s */
-    25% { margin-left: -100vw; }
-    45% { margin-left: -100vw; }
+    25% { transform: translateX(-100vw); }
+    45% { transform: translateX(-100vw); }
     
     /* Transición a Imagen 3: 9s a 11s */
-    50% { margin-left: -200vw; }
-    70% { margin-left: -200vw; }
+    50% { transform: translateX(-200vw) }
+    70% { transform: translateX(-200vw) }
     
     /* Transición a Imagen 4: 14s a 16s */
-    75% { margin-left: -300vw; }
-    95% { margin-left: -300vw; }
+    75% { transform: translateX(-300vw); }
+    95% { transform: translateX(-300vw); }
     
     /* Pausa prolongada en la última imagen y transición de vuelta a la primera */
-    100% { margin-left: 0; }
+    100% { transform: translateX(0); }
 }
 
 /* Seccion 5 */
@@ -804,7 +804,7 @@ body::before {
     width: 100%;
     max-width: 140rem;
     margin: 0 auto;
-    padding: 3rem 1rem 0;
+    padding: 3rem 1rem 6rem;
 }
 
 .section-6-title{
@@ -884,6 +884,45 @@ body::before {
     color: var(--blanco1);
     font-style: italic;
 }
+
+/* Carrusel de marcas infinito */
+.marcas-container {
+    width: 100vw;
+    max-width: 140rem;
+    margin: 3rem auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.marcas-track {
+    display: flex;
+    width: max-content;
+    animation: slide2 30s linear infinite;
+    will-change: transform; /* Optimización de rendimiento */
+}
+
+.marca {
+    width: 25vw; /* 4 marcas visibles (100vw/4) */
+    flex-shrink: 0;
+    padding: 0 1rem; /* Espaciado interno en lugar de márgenes */
+}
+
+.marca-img {
+    width: 100%;
+    height: 6rem;
+    display: block;
+    object-fit: contain;
+}
+
+@keyframes slide2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+  
 
 /* seccion 7 */
 
@@ -1479,9 +1518,36 @@ button:not([disabled]) {
 
 /* Seccion 6 */
 
+.section-6-container{
+    padding: 3rem 1rem 3rem;
+}
+
 .section-6-items-container{
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
+
+/* Carrusel de marcas. */
+
+.marcas-track {
+    animation: slide2 20s linear infinite;
+}
+
+.marca {
+    width: 33.33vw; 
+}
+
+.marca-img {
+    height: 5rem;
+}
+
+@keyframes slide2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100vw - 10.69rem));
+    }
+  }
 
 /* seccion 7 */
 
