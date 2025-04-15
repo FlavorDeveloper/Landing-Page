@@ -898,13 +898,12 @@ body::before {
     display: flex;
     width: max-content;
     animation: slide2 30s linear infinite;
-    will-change: transform; /* Optimización de rendimiento */
+    will-change: transform; 
 }
 
 .marca {
-    width: 25vw; /* 4 marcas visibles (100vw/4) */
+    width: 25vw;
     flex-shrink: 0;
-    padding: 0 1rem; /* Espaciado interno en lugar de márgenes */
 }
 
 .marca-img {
@@ -1529,11 +1528,11 @@ button:not([disabled]) {
 /* Carrusel de marcas. */
 
 .marcas-track {
-    animation: slide2 20s linear infinite;
+    animation: slide2 15s linear infinite;
 }
 
 .marca {
-    width: 33.33vw; 
+    width: 25vw; 
 }
 
 .marca-img {
@@ -1545,7 +1544,7 @@ button:not([disabled]) {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-100vw - 10.69rem));
+      transform: translateX(-100vw);
     }
   }
 
