@@ -197,6 +197,7 @@ body::before {
 
 .section-2{
     width: 100%;
+    padding-top: 6rem;
     background-color: var(--blanco1);
     overflow-x: hidden;
 }
@@ -1318,6 +1319,13 @@ button:not([disabled]) {
 }
 
 /* Seccion 2 */
+
+.section-2{
+    width: 100%;
+    padding-top: 3rem;
+    background-color: var(--blanco1);
+    overflow-x: hidden;
+}
 
 .card{
     max-width: 140rem;
